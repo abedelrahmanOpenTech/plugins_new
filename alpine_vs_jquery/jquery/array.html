@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+
+    <div class="array">
+        <input type="text" id="jsSearch">
+        <button id="jsAdd">add</button>
+
+        <div id="jsarray">
+            <!---->
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var array = JSON.parse(localStorage.getItem("savedArray")) ?? [0, 1, 2];
+
+        function removeElement(element) {
+            array = array.filter(el => el != element);
+            localStorage.setItem("savedArray", JSON.stringify(array));
+            renderArray(array);
+
+        }
+        function renderArray(array) {
+            var html = ``;
+            for (const element of array) {
+                html += `<h3 onclick='removeElement(${element})'>${element}</h3>`;
+            }
+            $("#jsarray").html(html);
+
+        }
+        $(function () {
+
+            renderArray(array);
+
+            $("#jsAdd").click(function (e) {
+                e.preventDefault();
+                array.push(array.length);
+                localStorage.setItem("savedArray", JSON.stringify(array));
+                renderArray(array);
+            });
+
+
+            $("#jsSearch").keyup(function (e) {
+                e.preventDefault();
+                var searchedValue = $(this).val();
+                var searchedArray = [];
+                for (const element of array) {
+                    if (element.toString().includes(searchedValue)) {
+                        searchedArray.push(element);
+                    }
+                }
+                renderArray(searchedArray);
+            });
+        });
+    </script>
+</body>
+
+</html>

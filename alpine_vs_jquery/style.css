@@ -1,0 +1,59 @@
+[x-cloak] {
+    display: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.counter button {
+    cursor: pointer;
+    background-color: #eee;
+    color: #222;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.array input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(112, 112, 112);
+
+}
+
+.array button {
+    padding: 10px;
+    background-color: rgb(9, 204, 129);
+    color: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+.array button:hover {
+    background-color: rgb(3, 146, 91);
+}
+
+.array h3 {
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tabs h3 {
+    background-color: #eee;
+    color: #222;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tabs .selcted {
+    border-bottom: 2px solid rgb(241, 0, 113);
+}

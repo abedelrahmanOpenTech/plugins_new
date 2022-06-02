@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine array</title>
+    <script defer src="persist.js"></script>
+    <script src="alpine.js" defer></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="array" x-data="{
+        array:$persist([0,1,2]),
+        searchValue:'',
+        }">
+
+        <input type="text" x-model="searchValue">
+        <button @click="array.push(array.length)">add</button>
+
+        <template x-for="element in array">
+            <h3 x-text="element" x-show="searchValue=='' || element.toString().includes(searchValue)"
+                @click="array=array.filter(el=>el!=element)"></h3>
+        </template>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
