@@ -15570,7 +15570,7 @@ i.flag-zw:before {
 
 .form-outline .form-control.is-valid~.form-label,
 .was-validated .form-outline .form-control:valid~.form-label {
-  color: #00b74a
+  /* color: #1266f1 */
 }
 
 .form-outline .form-control.is-valid~.form-notch .form-notch-leading,
@@ -15579,7 +15579,7 @@ i.flag-zw:before {
 .was-validated .form-outline .form-control:valid~.form-notch .form-notch-leading,
 .was-validated .form-outline .form-control:valid~.form-notch .form-notch-middle,
 .was-validated .form-outline .form-control:valid~.form-notch .form-notch-trailing {
-  border-color: #00b74a
+  border-color: grey
 }
 
 .form-outline .form-control.is-valid.active~.form-notch .form-notch-middle,
@@ -15591,17 +15591,17 @@ i.flag-zw:before {
 
 .form-outline .form-control.is-valid:focus~.form-notch .form-notch-middle,
 .was-validated .form-outline .form-control:valid:focus~.form-notch .form-notch-middle {
-  box-shadow: 0 1px 0 0 #00b74a
+  /* box-shadow: 0 1px 0 0 #00b74a */
 }
 
 .form-outline .form-control.is-valid:focus~.form-notch .form-notch-leading,
 .was-validated .form-outline .form-control:valid:focus~.form-notch .form-notch-leading {
-  box-shadow: -1px 0 0 0 #00b74a, 0 1px 0 0 #00b74a, 0 -1px 0 0 #00b74a
+  /* box-shadow: -1px 0 0 0 #00b74a, 0 1px 0 0 #00b74a, 0 -1px 0 0 #00b74a */
 }
 
 .form-outline .form-control.is-valid:focus~.form-notch .form-notch-trailing,
 .was-validated .form-outline .form-control:valid:focus~.form-notch .form-notch-trailing {
-  box-shadow: 1px 0 0 0 #00b74a, 0 -1px 0 0 #00b74a, 0 1px 0 0 #00b74a
+  /* box-shadow: 1px 0 0 0 #00b74a, 0 -1px 0 0 #00b74a, 0 1px 0 0 #00b74a */
 }
 
 .form-outline .form-control.is-valid.select-input.focused~.form-notch .form-notch-leading,
